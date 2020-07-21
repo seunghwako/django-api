@@ -1,7 +1,21 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <h1>Map api</h1>
+	<meta charset="utf-8"/>
+    <title>Kakao 지도 시작하기</title>
+    <h1>Map Api</h1>
 </head>
 <body>
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d7613eec7dfc0e9187518123e71f2a5e"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.7338502, 126.757014),
+			level: 3
+		};
 
+		var map = new kakao.maps.Map(container, options);
+	</script>
 </body>
+</html>
